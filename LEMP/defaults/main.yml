@@ -4,6 +4,7 @@ mysql_bind_address: "127.0.0.1" #Change it to "0.0.0.0",if you want to listen ev
 mysql_root_pass: mypassword #MySQL Root Password
 connections: 1024 #Nginx Connection
 server_name: localhost #Nginx server_name, change it to your website e.g: rbgeek.com
+mysql_secure_pass: 123456
 
 ubuntu_mysql_pkgs:
   - mysql-server
