@@ -6,6 +6,9 @@ connections: 1024 #Nginx Connection
 server_name: localhost #Nginx server_name, change it to your website e.g: rbgeek.com
 mysql_secure_pass: mypass
 
+wordpress_dir: /var/www/html/wp
+wordpress_url: http://wordpress.org/latest.tar.gz
+
 ubuntu_mysql_pkgs:
   - mysql-server
   - mysql-client
