@@ -7,9 +7,6 @@
 
 - name: Extract archive
   unarchive: src=/var/www/html/wordpress.tar.gz dest=/var/www/html/ copy=no #creates={{ wordpress_dir }}
-
-- name: change the Ownership to www-data
-  file: path={{ wordpress_dir }} state=directory mode=755 owner=www-data group=www-data
  
 - name: Create WordPress database
   mysql_db: name={{ wp_db_name }} state=present
@@ -19,5 +16,8 @@
   register: wordpress_stat
 
 - name: Move foo to bar
-  command: mv /var/www/html/wordpress /var/www/html/{{ wordpress_dir }}
+  command: mv /var/www/html/wordpress {{ wordpress_dir }}
   when: wordpress_stat.stat.exists
+
+- name: change the Ownership to www-data
+  file: path={{ wordpress_dir }} state=directory mode=755 owner=www-data group=www-data
