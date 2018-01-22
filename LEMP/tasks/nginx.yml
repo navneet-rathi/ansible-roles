@@ -3,7 +3,11 @@
   apt_repository:
     repo: 'ppa:nginx/stable'
     state: present
- 
+
+- name: Doing Something | Updateing the cache as a new repo is added...
+  apt:
+    update_cache="yes"
+    
 - name: Install Nginx
   apt:
     name: nginx
