@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: Linux
   become: yes
   gather_facts: yes
   roles:
