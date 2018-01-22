@@ -9,7 +9,6 @@
     name: nginx
     state: installed
     update_cache: yes
-#    register: command_result
 
 #- name: fail the play if the previous command did not succeed
 #  fail: msg="the command failed"
