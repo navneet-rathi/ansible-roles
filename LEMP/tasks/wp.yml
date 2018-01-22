@@ -15,9 +15,9 @@
   stat: path=/var/www/html/wordpress
   register: wordpress_stat
 
-- name: Move foo to bar
-  command: mv /var/www/html/wordpress {{ wordpress_dir }}
-  when: wordpress_stat.stat.exists
+#- name: Move foo to bar
+#  command: mv /var/www/html/wordpress {{ wordpress_dir }}
+#  when: wordpress_stat.stat.exists
 
 - name: change the Ownership to www-data
-  file: path={{ wordpress_dir }} state=directory mode=755 owner=www-data group=www-data recurse=yes
+  file: path=/var/www/html/wordpress state=directory mode=755 owner=www-data group=www-data recurse=yes
