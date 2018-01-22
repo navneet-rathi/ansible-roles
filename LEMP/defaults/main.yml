@@ -5,6 +5,7 @@ mysql_root_pass: mypassword #MySQL Root Password
 connections: 1024 #Nginx Connection
 server_name: localhost #Nginx server_name, change it to your website e.g: rbgeek.com
 mysql_secure_pass: mypass
+wp_db_name: wordpress
 
 wordpress_dir: /var/www/html/wp
 wordpress_url: http://wordpress.org/latest.tar.gz
