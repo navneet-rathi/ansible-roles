@@ -20,4 +20,4 @@
   when: wordpress_stat.stat.exists
 
 - name: change the Ownership to www-data
-  file: path={{ wordpress_dir }} state=directory mode=755 owner=www-data group=www-data
+  file: path={{ wordpress_dir }} state=directory mode=755 owner=www-data group=www-data recurse=yes
