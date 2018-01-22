@@ -17,6 +17,18 @@
     - 127.0.0.1
     - ::1
     - localhost
+    
+- name: Creating a New user for php to interact with
+  mysql_user:
+    name: navneet
+    host: "{{ item }}"
+    password: "{{mysql_secure_pass}}"
+    state: present
+  with_items:
+    - "{{ ansible_hostname }}"
+    - 127.0.0.1
+    - ::1
+    - localhost
 
 - name: Copy the templates to their respestive destination
   template:
