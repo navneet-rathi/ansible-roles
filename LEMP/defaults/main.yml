@@ -23,7 +23,7 @@ ubuntu_php_pkgs:
   - php7.0-common
   - php7.0-xmlrpc
   - php7.0-gd
-  - php7.0-pear
+  - php-pear
   - php7.0-dev
   - php7.0-imap
   - php7.0-mcrypt
