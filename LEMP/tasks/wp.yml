@@ -8,5 +8,5 @@
 - name: Extract archive
   unarchive: src=/var/www/html/wordpress.tar.gz dest=/var/www/html/ copy=no creates={{ wordpress_dir }}
 
-- name :change the Ownership to www-data
+- name: change the Ownership to www-data
   file: path={{ wordpress_dir }} state=directory mode=755 owner=www-data group=www-data
