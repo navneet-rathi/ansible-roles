@@ -22,7 +22,7 @@
   mysql_user:
     name: navneet
     host: "{{ item }}"
-    password: "{{mysql_secure_pass}}"
+    password: "{{ mysql_secure_pass }}"
     priv: '*.*:ALL'
     state: present
   with_items:
