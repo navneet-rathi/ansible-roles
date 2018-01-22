@@ -1,0 +1,22 @@
+---
+- name: Only run "update_cache=yes" if the last one is more than 3600 seconds ago
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+# Enable this when you are running ansible 2.4
+#- name: Remove useless packages from the cache |Clearing Deb cache
+#  apt:
+#    autoclean: yes
+
+# Enable this when you have ansible 2.1
+#- name: Remove dependencies that are no longer required | Autoclean
+#  apt:
+#    autoremove: yes
+ 
+# Enable this with you have ansible 2.1
+#- name: Upgrade all packages to the latest version
+#  apt:
+#    name: "*"
+#    allow_unauthenticated: yes
+#    state: latest    
